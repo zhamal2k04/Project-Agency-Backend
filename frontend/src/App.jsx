@@ -1,4 +1,4 @@
-import {React, useState, useEffect} from 'react';
+import {React} from 'react';
 import MyLayout from './components/Layout/MyLayout';
 import { Routes, Route } from "react-router-dom";
 import HomePage from './containers/HomePage/container/HomePage';
@@ -14,12 +14,13 @@ function App() {
     <div>
       <MyLayout>
         <Routes>
+          <Route path='*' element={"Nothing Found"}/>
           <Route path='/' element={<LoginPage/>}/>
           <Route path='/home' element={<HomePage/>}/>
           <Route path='/blog' element={<BlogsPage/>}/>
           <Route path='/about' element={<AboutPage/>} />
           <Route path='/sale' element={<SalePage/>} />
-          <Route path='/loginpage' element={<LoginPage/>}/>
+          <Route path='/signup-page' element={<LoginPage/>}/>
           <Route path='/contact-us' element={<ContactUs/>}/>
           <Route path='/ex' element={<LocationCard/>}/>
         </Routes>

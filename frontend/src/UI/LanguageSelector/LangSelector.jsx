@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import "./LangSelector.css"
-import i18n from '../../i18n';
+import i18n from "../../i18n"
 
 function LanguageSelector() {
   const { i18n } = useTranslation();

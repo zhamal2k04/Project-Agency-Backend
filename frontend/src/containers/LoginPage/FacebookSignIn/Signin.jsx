@@ -12,7 +12,7 @@ const SigninIn = () => {
         signInWithPopup(auth2,provider2).then((result) =>{
             setValue(result.user);
             localStorage.setItem('UserID', result.user.providerData[0].uid)
-            window.location.replace('https://zhamal2k04.github.io/Project--Agency#/home')
+            window.location.replace('https://zhamal2k04.github.io/Project--Agency/home')
            
         }).catch((err)=>{
             console.log(err)

@@ -3,7 +3,7 @@ import "./MainCenterCard.css"
 import amanda from "../../../../components/Images/amanda.jpg"
 import LeafLet from '../LocationCard/LocationCard'
 import { useTranslation } from 'react-i18next'
-import axios from "axios";
+
 
 const MainCenterCard = () => {
     const {t} = useTranslation();

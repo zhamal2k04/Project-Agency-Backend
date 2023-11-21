@@ -1,4 +1,4 @@
-import React, { useTransition } from 'react'
+import React from 'react'
 import "./MyNavbar.css"
 import bgImg from "../Images/logo.png";
 import { Link } from 'react-router-dom';
@@ -18,7 +18,7 @@ const MyNavbar = () => {
             <Link to={"/blog"}>{t('blog')}</Link>
             <Link to={"/sale"}>{t('sale')}</Link>
             <Link to={"/contact-us"}>{t('contact')}</Link>
-            <Link to={"/login"}><FaUserAlt className='relative items-center justify-center'/></Link>
+            <Link to={"/signup-page"}><FaUserAlt className='relative items-center justify-center'/></Link>
             <LanguageSelector/>
         </ul>
     </div>
