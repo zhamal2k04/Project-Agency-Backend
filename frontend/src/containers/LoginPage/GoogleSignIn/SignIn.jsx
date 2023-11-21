@@ -11,7 +11,7 @@ const SignIn = () => {
         signInWithPopup(auth, provider).then((data) => {
             setValue(data.user.email)
             localStorage.setItem("Email", data.user.email)
-            window.location.replace("https://zhamal2k04.github.io/Project--Agency/home")
+            window.location.replace("https://zhamal2k04.github.io/Project-Agency-Backend#/home")
         })
     }
     
