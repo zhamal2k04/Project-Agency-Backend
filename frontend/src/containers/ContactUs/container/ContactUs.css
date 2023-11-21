@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contactUs-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}

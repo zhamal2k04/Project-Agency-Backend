@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Public Sans", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+}
+.navbar-container {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  padding: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.navbar-container > img {
+  width: 130px;
+  height: 37px;
+}
+
+.navbar-container > ul {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  color: #191919;
+  list-style: none;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.07px;
+}
+
+.navbar-container>ul>a{
+  color: #191919;
+  text-decoration: none;
+  transform: scale(1);
+  transition: .5s ease-out;
+}
+
+.navbar-container>ul>a:hover{
+  cursor: pointer;
+  color: #cacaca;
+  transform:scale(1.1);
+}

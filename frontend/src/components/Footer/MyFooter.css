@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  width: 100%;
+  height: 433px;
+  background-color: #191919;
+  padding: 3rem;
+}
+
+.footerLinkHolder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.firstLinks,
+.secondaryLinks,
+.thirdLinks {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+.firstLinks > ul {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  list-style: none;
+}
+
+.firstLinks > ul > li > img {
+  width: 42px;
+  height: 42px;
+  transition: .4s all ease-in-out;
+  transform: scale(1);
+}
+
+.firstLinks>ul>li>img:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+  transition: step-end;
+}
+
+.firstLinks > img {
+  width: 110px;
+  height: 31px;
+}
+
+.firstLinks > p {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: lighter;
+  line-height: 24px;
+}
+
+.secondaryLinks > section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.secondaryLinks > section > p {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: lighter;
+  line-height: 24px;
+}
+
+.secondaryLinks>section>p:hover{
+  text-decoration: underline;
+  cursor: pointer;
+  opacity: .7;
+}
+
+.secondaryLinks > h1,
+.thirdLinks > h1 {
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 26px;
+}
+
+.thirdLinks > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: lighter;
+  line-height: 24px;
+}
+
+.thirdLinks >ul>li:hover{
+  text-decoration: underline;
+  cursor: pointer;
+  opacity: .7;
+}
+
+.footerEnd {
+  margin-top: 10px;
+  width: 100%;
+  height: 24px;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerEnd > p {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+

@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&display=swap");
+.about-container {
+    margin-top: 100px;
+  width: 100%;
+  height: 570px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+  padding: 30px;
+}
+
+.aboutLeft-container {
+  width: 50%;
+  height: 100%;
+  background-image: url("../../../../components/Images/bg-About.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.aboutRight-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.MainText,
+.LowerText {
+  width: 50%;
+  height: 100%;
+}
+
+.MainText {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.MainText > h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.07px;
+  color: #6546be;
+}
+
+.MainText > h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  color: #191919;
+}
+
+.MainText > p {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  color: #595959;
+}
+
+.LowerText {
+  display: flex;
+  flex-direction: column;
+}
+
+.NumsHolder {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.projecstNum,
+.clientsNum {
+  width: 200px;
+  height: 150px;
+}
+
+.projecstNum > h1,
+.clientsNum > h1 {
+  font-family: "Lora", serif;
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 52px;
+}
+
+.projecstNum > p,
+.clientsNum > p {
+  margin-top: 15px;
+  font-family: "Poppins", serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.LowerText > span > p {
+  color: #7170db;
+  text-align: left;
+  font-family: "Poppins", serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0.08px;
+  text-decoration: 2px underline;
+  cursor: pointer;
+}

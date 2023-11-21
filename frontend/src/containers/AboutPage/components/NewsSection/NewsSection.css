@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.newsSection {
+  margin-top: 90px;
+  width: 100%;
+  height: 610px;
+}
+
+.sectionsHandler {
+  width: 100%;
+  height: 580px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 32px;
+  padding: 1rem;
+}
+
+.sectionLeft,
+.sectionRight {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
+  padding-left: 8%;
+}
+
+.sectionLeft > img,
+.sectionRight > img {
+  width: 450px;
+  height: 310px;
+  border-radius: 10px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.sectionLeft > p,
+.sectionRight > p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.07px;
+  color: #6546be;
+}
+
+.sectionLeft > h1,
+.sectionRight > h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  color: #191919;
+  width: 400px;
+}
+
+.sectionLeft > span > p,
+.sectionRight > span > p {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  color: #595959;
+}

@@ -1,0 +1,67 @@
+/* LangSelector.css */
+
+/* Стиль для обертки выбора языка */
+.language-selector {
+  display: inline-block;
+  position: relative;
+}
+
+/* Стиль для селектора языка */
+#language-select {
+  background-color: #333; /* Цвет фона селектора */
+  color: #fff; /* Цвет текста в селекторе */
+  border: 2px solid #443dc4; /* Граница селектора */
+  border-radius: 4px; /* Скругление углов */
+  padding: 8px; /* Внутренний отступ */
+  font-size: 16px; /* Размер шрифта */
+  outline: none; /* Убрать рамку при фокусе */
+  width: 100px; /* Ширина селектора */
+  cursor: pointer; /* Изменение курсора при наведении */
+  transition: background-color 0.3s, border-color 0.3s; /* Плавное изменение цветов при наведении */
+  transform: scale(1);
+}
+
+/* Стиль для селектора языка при наведении */
+#language-select:hover {
+  background-color: #5852d6; /* Цвет фона при наведении */
+  border-color: #333; /* Цвет границы при наведении */
+  color: #333; /* Цвет текста при наведении */
+}
+
+@media (max-width: 428px) {
+  #language-select {
+    width: 50px;
+    height: 30px;
+    font-size: 14px;
+    padding: inherit;
+    padding-left: 5px;
+  }
+}
+@media (max-width: 414px) {
+  #language-select {
+    width: 50px;
+    height: 22px;
+    font-size: 14px;
+    padding: inherit;
+    padding-left: 5px;
+  }
+}
+@media (max-width: 390px) {
+  #language-select {
+    width: 50px;
+    height: 22px;
+    font-size: 14px;
+    padding: inherit;
+    padding-left: 5px;
+  }
+}
+
+@media (max-width: 375px) {
+  #language-select {
+    width: 50px;
+    height: 22px;
+    font-size: 14px;
+    padding: inherit;
+    padding-left: 5px;
+  }
+}

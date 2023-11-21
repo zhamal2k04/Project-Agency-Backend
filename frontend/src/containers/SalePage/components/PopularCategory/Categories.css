@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.categories-container {
+    margin-top: 100px;
+  width: 100%;
+  height: 920px;
+}
+
+.categoriesHandler {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 30px;
+  gap: 20px;
+}
+
+.categoriesLeft-section,
+.categoriesRight-section {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.categoriesLeft-section {
+  padding-left: 23%;
+}
+
+.categoriesLeft-section > section {
+  width: 400px;
+  height: 350px;
+  background-image: url("../../../../components/Images/categoriesPic-1.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.categoriesLeft-section > section:nth-child(2) {
+  width: 400px;
+  height: 450px;
+  background-image: url("../../../../components/Images/categoriesPic-2.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.categoriesRight-section > section {
+  width: 400px;
+  height: 450px;
+  background-image: url("../../../../components/Images/categoriesPic-3.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.categoriesRight-section > section:nth-child(2) {
+  width: 400px;
+  height: 350px;
+  background-image: url("../../../../components/Images/categoriesPic-4.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
