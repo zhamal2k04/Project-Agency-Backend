@@ -5,7 +5,8 @@ import SignIn from '../GoogleSignIn/SignIn'
 import SigninIn from '../FacebookSignIn/Signin';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
-const LoginPage = () => {
+
+const SignUp = () => {
     const [email, setEmail] = useState('')
     const [emailDirty, setEmailDirty] = useState(false)
     const [emailError, setEmailError] = useState("Name Hole Not Filled !")
@@ -66,11 +67,12 @@ const LoginPage = () => {
           console.log({ email, password });
       
           // Make a POST request to your server with user data
-          const response = await axios.post('/login', { email, password });
+          const response = await axios.post('/signup', { email, password });
       
           // Handle the response (you can show a success message or redirect the user)
           console.log(response.data);
-          window.location.replace("http://localhost:3000/home")
+          window.location.replace("http://localhost:3000/log-in")
+
         } catch (error) {
           // Handle errors (show an error message to the user)
           console.error(error);
@@ -103,11 +105,13 @@ const LoginPage = () => {
                     {(passwordDirty && passwordError) && <div className='font-bold text-red-700 '>{passwordError}</div>}
                     <input name='password' type='password' onChange={e => passwordHandler(e)} value={password} onBlur={e => blurHandler(e)} className='border relative bg-gray-100 p-2 font-mono italic mt-3' placeholder='e.g 12345678'/>
                 </div>
-                <button disabled={!formValid} className='w-full py-3 mt-8 bg-indigo-600 hover:bg-indigo-500 relative text-white' type='submit'>Log In</button>
+                <button disabled={!formValid} className='w-full py-3 mt-8 bg-indigo-600 hover:bg-indigo-500 relative text-white' type='submit'>Sign Up</button>
+                <p className='flex items-center mt-2 font-bold font-sans'><input className='mr-2' type="checkbox" />{t("remember")}</p>
+                <p className='text-center mt-8'>Not a member? <span className='text-center underline font-mono text-blue-500 font-bold'>{t("login")}</span></p>
             </form>
         </div>
     </div>
   )
 }
 
-export default LoginPage;
+export default SignUp;

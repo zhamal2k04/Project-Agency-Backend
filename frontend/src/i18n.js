@@ -83,7 +83,9 @@ i18n
           Password: "Password",
           signup: "Sign Up",
           login: "Log In Now!",
-          remember: "Remember Me"
+          remember: "Remember Me",
+          login: "Login",
+          sign_up: "Sign Up"
         },
     },
       ru: {
@@ -164,7 +166,9 @@ i18n
           Password: "Пароль",
           signup: "Зарегистрироваться",
           login: "Войдите сейчас!",
-          remember: "Запомнить меня"
+          remember: "Запомнить меня",
+          login: "Логин",
+          sign_up: "Регистрация"
         },
       },
     },

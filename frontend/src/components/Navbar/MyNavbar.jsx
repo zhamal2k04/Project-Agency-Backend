@@ -18,7 +18,8 @@ const MyNavbar = () => {
             <Link to={"/blog"}>{t('blog')}</Link>
             <Link to={"/sale"}>{t('sale')}</Link>
             <Link to={"/contact-us"}>{t('contact')}</Link>
-            <Link to={"/signup-page"}><FaUserAlt className='relative items-center justify-center'/></Link>
+            <Link to={"/sign-up"}>{t('sign_up')}</Link>
+            <Link to={"/log-in"}>{t('login')}</Link>
             <LanguageSelector/>
         </ul>
     </div>
