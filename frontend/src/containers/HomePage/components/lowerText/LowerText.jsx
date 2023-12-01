@@ -4,12 +4,12 @@ import dot from "../../../../components/Images/dot.png"
 import { useTranslation } from 'react-i18next';
 
 const LowerText = () => {
-    const { t } = useTranslation()  
+    const { t } = useTranslation()  ;
   return (
     <div className='lowerText-container'>
         <div className="leftContainer">
             <h1>{t("lowerCardTitle")}</h1>
-            <p>{t("lowerCardSubTitle")}</p>
+            <p>{t('lowerCardSubtitle')}</p>
             <ul>
                 <li>{t("listOne")}</li>
                 <li>{t("listTwo")}</li>
@@ -21,7 +21,7 @@ const LowerText = () => {
         </div>
         <div className="rightContainer">
             <h1>{t("lowerCardTitle2")}</h1>
-            <p>{t("lowerCardSubTitle")}</p>
+            <p>{t("lowerCardSubtitle")}</p>
             <ul>
                 <li>{t("listOne")}</li>
                 <li>{t("listTwo")}</li>

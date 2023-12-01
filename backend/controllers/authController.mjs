@@ -1,6 +1,5 @@
 import User from "../models/User.mjs";
 import jwt from "jsonwebtoken";
-
 // handle errors
 const handleErrors = (err) => {
   console.log(err.message, err.code);

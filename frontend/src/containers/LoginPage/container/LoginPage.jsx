@@ -5,6 +5,7 @@ import SignIn from '../GoogleSignIn/SignIn'
 import SigninIn from '../FacebookSignIn/Signin';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
+
 const LoginPage = () => {
     const [email, setEmail] = useState('')
     const [emailDirty, setEmailDirty] = useState(false)
@@ -13,6 +14,10 @@ const LoginPage = () => {
     const [passwordDirty, setPasswordDirty] = useState(false)
     const [passwordError, setPasswordError] = useState("Password Hole Not Filled !")
     const [formValid, setFormValid] = useState(false)
+
+    const handleSignUpClick = () => {
+        window.location.href = '/sign-up';
+    };
     
     useEffect(()=>{
         if(emailError || passwordError) {
@@ -87,7 +92,7 @@ const LoginPage = () => {
         <div className='flex justify-center items-center h-full'>
             <form onSubmit={handleSubmit} className='max-w-[400px] w-full mx-auto bg-white p-8'>
                 <div className='flex flex-col justify-between py-8'>
-                <h2 className='text-3xl font-bold text-indigo-900 text-center py-4'>{t("joinUs")}</h2>
+                <h2 className='text-3xl font-bold text-indigo-900 text-center py-4'>{t("login")}</h2>
                    <div className='flex flex-row items-center justify-between py-8'>
                     <SignIn/>
                     <SigninIn/>
@@ -103,7 +108,8 @@ const LoginPage = () => {
                     {(passwordDirty && passwordError) && <div className='font-bold text-red-700 '>{passwordError}</div>}
                     <input name='password' type='password' onChange={e => passwordHandler(e)} value={password} onBlur={e => blurHandler(e)} className='border relative bg-gray-100 p-2 font-mono italic mt-3' placeholder='e.g 12345678'/>
                 </div>
-                <button disabled={!formValid} className='w-full py-3 mt-8 bg-indigo-600 hover:bg-indigo-500 relative text-white' type='submit'>Log In</button>
+                <button disabled={!formValid} className='w-full py-3 mt-8 bg-indigo-600 hover:bg-indigo-500 relative text-white' type='submit'>{t('login')}</button>
+
             </form>
         </div>
     </div>

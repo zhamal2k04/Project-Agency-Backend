@@ -84,8 +84,10 @@ i18n
           signup: "Sign Up",
           login: "Log In Now!",
           remember: "Remember Me",
-          login: "Login",
-          sign_up: "Sign Up"
+          login: "Log In",
+          sign_up: "Sign Up",
+          nameHole: "Name Hole Not Filled!",
+          passHole: "Password Hole Not Filled!",
         },
     },
       ru: {
@@ -168,7 +170,9 @@ i18n
           login: "Войдите сейчас!",
           remember: "Запомнить меня",
           login: "Логин",
-          sign_up: "Регистрация"
+          sign_up: "Регистрация",
+          nameHole: "Поля для имени не заполнено!",
+          passHole: "Поля для паролей не заполнено!"
         },
       },
     },

@@ -25,10 +25,11 @@ const SignUp = () => {
 
     const emailHandler = (e) =>{
         setEmail(e.target.value)
+        const errorMsg = t('nameHole')
         if (e.target.value.length < 3 || e.target.value.length > 25) {
             setEmailError("Length must be more than 3 or 25")
             if(!e.target.value){
-                setEmailError("Please Fill Name Hole!")
+                setEmailError(errorMsg)
             }
         }else{
             setEmailError('')
@@ -37,10 +38,11 @@ const SignUp = () => {
 
     const passwordHandler = (e) =>{
         setPassword(e.target.value)
+        const errorMsg2 = t('passHole')
         if (e.target.value.length < 3 || e.target.value.length > 8) {
             setPasswordError("Legnth must be more than 3 and 8")
             if (!e.target.value) {
-                setPasswordError("Please Fill Password Hole!")
+                setPasswordError(errorMsg2)
             }
         }else{
            setPasswordError('')
@@ -105,9 +107,7 @@ const SignUp = () => {
                     {(passwordDirty && passwordError) && <div className='font-bold text-red-700 '>{passwordError}</div>}
                     <input name='password' type='password' onChange={e => passwordHandler(e)} value={password} onBlur={e => blurHandler(e)} className='border relative bg-gray-100 p-2 font-mono italic mt-3' placeholder='e.g 12345678'/>
                 </div>
-                <button disabled={!formValid} className='w-full py-3 mt-8 bg-indigo-600 hover:bg-indigo-500 relative text-white' type='submit'>Sign Up</button>
-                <p className='flex items-center mt-2 font-bold font-sans'><input className='mr-2' type="checkbox" />{t("remember")}</p>
-                <p className='text-center mt-8'>Not a member? <span className='text-center underline font-mono text-blue-500 font-bold'>{t("login")}</span></p>
+                <button disabled={!formValid} className='w-full py-3 mt-8 bg-indigo-600 hover:bg-indigo-500 relative text-white cursor-pointer' type='submit'>{t('sign_up')}</button>
             </form>
         </div>
     </div>

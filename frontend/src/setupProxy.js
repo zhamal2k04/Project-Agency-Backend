@@ -16,4 +16,12 @@ module.exports = function (app) {
       changeOrigin: true,
     })
   );
+
+  app.use(
+    "/api/submitForm",
+    createProxyMiddleware({
+      target: "http://localhost:5500",
+      changeOrigin: true,
+    })
+  );
 };

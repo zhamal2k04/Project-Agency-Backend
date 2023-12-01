@@ -15,7 +15,7 @@ function App() {
     <div>
       <MyLayout>
         <Routes>
-          <Route path='*' element={"Nothing Found"}/>
+          <Route path='*' element={"NOTHING FOUND"}/>
           <Route path='/' element={<LoginPage/>}/>
           <Route path='/log-in' element={<LoginPage/>}/>
           <Route path='/sign-up' element={<SignUp/>}/>

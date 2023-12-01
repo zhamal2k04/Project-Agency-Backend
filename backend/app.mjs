@@ -3,6 +3,8 @@ import mongoose from "mongoose";
 import authRoutes from "./routes/authRoutes.mjs";
 import cookieParser from "cookie-parser";
 import { requireAuth, checkUser } from "./middleware/authMiddleware.mjs";
+import cors from "cors"
+
 
 const app = express();
 
@@ -10,9 +12,7 @@ const app = express();
 app.use(express.static("public"));
 app.use(express.json());
 app.use(cookieParser());
-
-// view engine
-app.set("view engine", "ejs");
+app.use(cors())
 
 // database connection
 const dbURI =
@@ -30,3 +30,29 @@ mongoose
 // routes
 app.get("*", checkUser);
 app.use(authRoutes);
+
+
+const commentSchema = {
+  name: String,
+  email: String,
+  comment: String,
+};
+
+const Comment = mongoose.model("contacts", commentSchema);
+
+app.post("/api/submitForm", async (req, res) => {
+  try {
+    const { name, email, comment } = req.body;
+    const newComment = new Comment({
+      name,
+      email,
+      comment,
+    });
+    const savedComment = await newComment.save();
+    res.status(200).json({ message: "Comment submitted successfully" });
+  } catch (err) {
+    res.status(500).send("Failed to save the comment");
+  }
+});
+
+

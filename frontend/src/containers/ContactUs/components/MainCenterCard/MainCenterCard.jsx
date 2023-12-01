@@ -3,7 +3,7 @@ import "./MainCenterCard.css"
 import amanda from "../../../../components/Images/amanda.jpg"
 import LeafLet from '../LocationCard/LocationCard'
 import { useTranslation } from 'react-i18next'
-
+import axios from 'axios'
 
 const MainCenterCard = () => {
     const {t} = useTranslation();
@@ -15,12 +15,33 @@ const MainCenterCard = () => {
 
     const handleChange = (e) => {
         setFormData({
-          ...formData,
-          [e.target.name]: e.target.value,
+            ...formData,
+            [e.target.name]: e.target.value,
         });
-      };
+    };
+    
       
-      
+    const handleClick = async (e) => {
+        e.preventDefault();
+        try {
+            const { name, email, comment } = formData;
+            const response = await axios.post("http://localhost:5500/api/submitForm", {
+                name,
+                email,
+                comment,
+            });
+    
+            if (response.status === 200) {
+                console.log("Form data sent successfully");
+                window.location.replace("http://localhost:3000/home");
+            }
+        } catch (err) {
+            console.log("Error occurred while sending form data:", err);
+        }
+    };
+    
+    
+
   return (
     <div className='mainCenterCard-container'>
         <h1>{t('ContactUs')}</h1>
@@ -33,9 +54,9 @@ const MainCenterCard = () => {
                         <p>{t("helperText")} hello@california-golfclub.org.</p>
                     </span>
                 </div>
-                <form action='/api/submitForm' method='POST'>
+                <form onSubmit={handleClick}>
                     <label>Name</label>
-                    <input type="text" value={formData.value} onChange={handleChange} name='name' id='name' placeholder='Rachel Joe'/>
+                    <input type="text" value={formData.name} onChange={handleChange} name='name' id='name' placeholder='Rachel Joe'/>
                     <label>Email</label>
                     <input type="email" value={formData.email} onChange={handleChange} name='email' id='email' placeholder='Rachel@domain.com'/>
                     <label>Message</label>
